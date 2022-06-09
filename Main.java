@@ -105,11 +105,12 @@ public class Main {
         	if(expense!=0&& arrayList.get(i)==expense) {
         		System.out.println("Expense found at the index of: "+i);
         		break;
-        	}
+        	}else if( i==leng-1 &&arrayList.get(i)!=expense ) {
+       		 System.out.println("Expense not found!");
+       	}
         	
         }
-        System.out.println("Expense not found!");
-        si.close();
+        
         //Complete the method
     }
     
