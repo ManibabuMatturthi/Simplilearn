@@ -91,6 +91,8 @@ public class Main {
     private static void closeApp() {
         System.out.println("Closing your application... \nThank you!");
             }
+    
+    // My code for searchExpenses with Linearsearch Algorithm.
     private static void searchExpenses(ArrayList<Integer> arrayList) {
     	Scanner si=new Scanner(System.in);
         int leng = arrayList.size();
@@ -110,6 +112,8 @@ public class Main {
         si.close();
         //Complete the method
     }
+    
+    // My code fir sortExpenses with Bubble Sort Algorithm. 
     private static void sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
