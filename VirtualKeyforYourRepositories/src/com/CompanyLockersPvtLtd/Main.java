@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
+		// Initiating String Variable to return the Welcome page along the Developer Information 
 		String wel="------------------------------------------------------------------------\n "
 				+ "Welcome to CompanyLockersPvtLtd\n"
 				+  "------------------------------------------------------------------------\n";
@@ -15,10 +15,11 @@ public class Main {
 		System.out.println("Project Name: (Virtual Key for Your Repositories)");
 		System.out.println("Developer Name: Mani Babu M");
 		
-				
+		//calling Main Menu
 		mainMenu();
-		
 	}
+	
+	// Main Menu implemented here 
 	public static void mainMenu() throws IOException {
 		Scanner s1= new Scanner(System.in);
 		
@@ -32,32 +33,39 @@ public class Main {
 			System.out.println(s);
 		System.out.println("select your Choice:");
 		int ch=s1.nextInt();
-		
+		// Switch case written here to navigate to the selected option  
 		switch(ch) {
 		case 1:
+			//calling the sort method from Business logic method
 			BusinessLogic2.sortFiles();
+			//calling main menu to continue with the menu.
 			mainMenu();
 			break;
 			
 		case 2:
+			//navigating to the file operations menu by calling options method
 			options();
 			break;			
 			
 		case 3:
-			//BusinessLogic2.exit();
+			
+			//Quitting from the menu
+			
 			System.out.println("closing the app.....");
 			break;
 			
 		default:
+			// to warn the wrong option entry and navigating to main menu to proceed with app 
 			System.out.println("worng selection, try again");
 			mainMenu();
 		}
 		}
-		
-		
 	
-
+	// Options method implemented here to go with file operations 
+		
 	public static void options() throws IOException {
+		
+		//initiated and declared String array to store the operation names
 		String[] menu = {
 				"a. Create file",
 				"b. Delete file",
@@ -71,7 +79,7 @@ public class Main {
 		Scanner s2= new Scanner(System.in);
 		String ch = s2.next();
 		BusinessLogic2 bl = new BusinessLogic2();
-		//try {
+		//Selecting Choice for the file operations
 		switch (ch) {
 			case "a":				
 				System.out.println("Creating a file:");
@@ -100,11 +108,6 @@ public class Main {
 			options();
 		}
 		
-		
-		
-		
-		
 	}
 		
-
 }
