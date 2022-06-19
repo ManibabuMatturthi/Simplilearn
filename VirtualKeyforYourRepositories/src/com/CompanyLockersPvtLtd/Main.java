@@ -102,6 +102,7 @@ public class Main {
 			case "d":
 				System.out.println("Returning to Main Menu!");
 				mainMenu();
+				break;
 				
 		default:
 			System.out.println("Invalid Option try again");
